@@ -1,7 +1,7 @@
 import { BaseController } from '@logisto/common';
-import { Tracer } from '@logisto/entity';
 import { EntityManager } from '@mikro-orm/mongodb';
 import { Controller, Post } from '@nestjs/common';
+import { Tracer } from './entities';
 
 @Controller('tracer')
 export class TracerController extends BaseController {
@@ -10,7 +10,7 @@ export class TracerController extends BaseController {
   }
 
   @Post()
-  create() {
+  async create() {
     const tracer = new Tracer();
 
     this.em.create(Tracer, tracer);

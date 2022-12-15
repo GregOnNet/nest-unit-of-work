@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@logisto/common": ["libs/common/src/index.ts"],
+      "@logisto/entity": ["libs/entity/src/index.ts"],
+      "@logisto/yard": ["libs/yard/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
